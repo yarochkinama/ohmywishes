@@ -77,6 +77,6 @@ export const useStore = create<AppStore>()(
         return id
       },
     }),
-    { name: 'ohmywishes-store-v2' }
+    { name: 'wishlist-store-v2' }
   )
 )

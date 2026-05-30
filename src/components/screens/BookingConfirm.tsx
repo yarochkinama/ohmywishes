@@ -85,10 +85,14 @@ export function BookingConfirm({ gift, friend, onDone, onBuyLink, onViewOthers }
           <button
             onClick={onBuyLink}
             className="press"
-            style={{ width: '100%', height: 54, borderRadius: 14, background: '#6BA83A', color: 'white', fontWeight: 600, fontSize: 16, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}
+            style={{ width: '100%', height: 62, borderRadius: 14, background: '#6BA83A', color: 'white', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 14, padding: '0 18px', textAlign: 'left' }}
           >
-            <span>🛒</span>
-            Купить по ссылке → Перейти в магазин
+            <span style={{ fontSize: 22 }}>🛒</span>
+            <div>
+              <div style={{ fontSize: 15, fontWeight: 600 }}>Купить по ссылке</div>
+              <div style={{ fontSize: 12, opacity: 0.8 }}>Перейти в магазин</div>
+            </div>
+            <svg style={{ marginLeft: 'auto' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
           <button
             onClick={onViewOthers}

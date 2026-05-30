@@ -79,7 +79,7 @@ export function Profile({ onMyWishlists }: ProfileProps) {
           ))}
         </div>
 
-        <p style={{ textAlign: 'center', fontSize: 12, color: '#C0C0C0', marginTop: 24 }}>Ohmywishes v2.0 · Сделано с 💜</p>
+        <p style={{ textAlign: 'center', fontSize: 12, color: '#C0C0C0', marginTop: 24 }}>Wishlist v1.0 · Сделано с 💜</p>
       </div>
     </div>
   )

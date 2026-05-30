@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ohmywishes — подари то, что хотят",
+  title: "Wishlist — подари то, что хотят",
   description: "Приложение для вишлистов и подарков без дублей",
 };
 

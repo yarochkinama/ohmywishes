@@ -91,7 +91,7 @@ export function FriendWishlist({ friend, wishlist, onBack, onGift }: FriendWishl
         </div>
 
         {/* Filter tabs */}
-        <div style={{ display: 'flex', gap: 8, padding: '0 20px 16px' }}>
+        <div className="scroll-x" style={{ display: 'flex', gap: 8, padding: '0 20px 16px' }}>
           {([
             ['all', `Все подарки ${total}`],
             ['free', `Свободные ${freeCount}`],
@@ -125,7 +125,7 @@ export function FriendWishlist({ friend, wishlist, onBack, onGift }: FriendWishl
             return (
               <button
                 key={gift.id}
-                onClick={() => isFree ? onGift(gift.id) : undefined}
+                onClick={() => onGift(gift.id)}
                 className="press"
                 style={{
                   display: 'flex',
@@ -135,9 +135,8 @@ export function FriendWishlist({ friend, wishlist, onBack, onGift }: FriendWishl
                   borderRadius: 14,
                   border: '1px solid #F0F0F0',
                   background: 'white',
-                  cursor: isFree ? 'pointer' : 'default',
+                  cursor: 'pointer',
                   textAlign: 'left',
-                  opacity: isFree ? 1 : 0.7,
                 }}
               >
                 {/* Image */}
