@@ -61,7 +61,11 @@ export function App() {
   const showBottomNav = BOTTOM_NAV_SCREENS.includes(screen.id)
 
   if (!onboardingDone) {
-    return <Onboarding />
+    return (
+      <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
+        <Onboarding />
+      </div>
+    )
   }
 
   // Helper lookups

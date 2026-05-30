@@ -14,8 +14,7 @@ const onboardingSlides = [
 function SplashScreen({ onNext }: { onNext: () => void }) {
   return (
     <div
-      className="absolute inset-0 flex flex-col items-center justify-center"
-      style={{ background: '#0D0D0D' }}
+      style={{ position: 'absolute', inset: 0, background: '#0D0D0D', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
       onClick={onNext}
     >
       {/* Decorative stars */}
@@ -88,7 +87,7 @@ function OnboardingSlide({
 }) {
   const isLast = index === total - 1
   return (
-    <div className="absolute inset-0 flex flex-col bg-white">
+    <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', background: '#fff' }}>
       <StatusBar />
       {/* Skip */}
       <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '4px 20px 0' }}>
@@ -204,7 +203,7 @@ function AuthScreen({ onDone }: { onDone: () => void }) {
   ]
 
   return (
-    <div className="absolute inset-0 flex flex-col bg-white">
+    <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', background: '#fff' }}>
       <StatusBar />
       <div style={{ padding: '8px 20px 0' }}>
         <button
