@@ -145,10 +145,10 @@ export const FAVORITES: FavoriteItem[] = [
 
 // Home feed ideas
 export const HOME_IDEAS = [
-  { id: 'hi1', name: 'Сертификат на мастер-класс', price: 3990, image: '🎨', imageBg: '#FFF0F5', shop: null },
-  { id: 'hi2', name: 'Аромонабор для дома', price: 2490, image: '🌿', imageBg: '#F0FFF5', shop: null },
-  { id: 'hi3', name: 'Набор для матча', price: 3490, image: '🍵', imageBg: '#F0FFF5', shop: 'ozon' as Shop },
-  { id: 'hi4', name: 'Кожаный кошелёк', price: 4990, image: '👛', imageBg: '#FFF8F0', shop: 'wb' as Shop },
+  { id: 'hi1', name: 'Сертификат на мастер-класс', price: 3990, image: 'https://images.unsplash.com/photo-1577941796491-999f99ba658f?w=400&h=280&fit=crop&auto=format&q=80', imageBg: '#F5F0FF', shop: null },
+  { id: 'hi2', name: 'Аромонабор для дома', price: 2490, image: 'https://images.unsplash.com/photo-1560521166-99f8bed834f5?w=400&h=280&fit=crop&auto=format&q=80', imageBg: '#F5FFF0', shop: null },
+  { id: 'hi3', name: 'Набор для матча', price: 3490, image: 'https://images.unsplash.com/photo-1755685977172-213081976785?w=400&h=280&fit=crop&auto=format&q=80', imageBg: '#F0FFF5', shop: 'ozon' as Shop },
+  { id: 'hi4', name: 'Кожаный кошелёк', price: 4990, image: 'https://images.unsplash.com/photo-1570431118100-c24a54fdeab0?w=400&h=280&fit=crop&auto=format&q=80', imageBg: '#FFF5F0', shop: 'wb' as Shop },
 ]
 
 export function formatPrice(p: number) {
