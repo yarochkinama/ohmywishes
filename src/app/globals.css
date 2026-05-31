@@ -13,6 +13,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
 }
 
+/* Fix Tailwind v4 inset shorthand — explicit properties override broken shorthand */
+.inset-0 {
+  top: 0px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+}
+
 .phone {
   width: 390px;
   height: 844px;
@@ -43,15 +51,15 @@ body {
 .scroll-x::-webkit-scrollbar { display: none; }
 
 @keyframes slideInRight {
-  from { transform: translateX(100%); opacity: 0.5; }
-  to   { transform: translateX(0); opacity: 1; }
+  from { transform: translateX(4%); }
+  to   { transform: translateX(0); }
 }
 @keyframes slideInLeft {
-  from { transform: translateX(-30%); opacity: 0.5; }
-  to   { transform: translateX(0); opacity: 1; }
+  from { transform: translateX(-4%); }
+  to   { transform: translateX(0); }
 }
-.slide-in-right { animation: slideInRight .28s cubic-bezier(.4,0,.2,1) forwards; }
-.slide-in-left  { animation: slideInLeft  .28s cubic-bezier(.4,0,.2,1) forwards; }
+.slide-in-right { animation: slideInRight .22s ease-out both; }
+.slide-in-left  { animation: slideInLeft  .22s ease-out both; }
 
 @keyframes fadeIn {
   from { opacity: 0; }
