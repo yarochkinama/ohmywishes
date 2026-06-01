@@ -51,61 +51,74 @@ const onboardingSlides = [
   },
 ]
 
+const STARS = [
+  { top: '9%',  left: '14%',  size: 16, opacity: 0.55 },
+  { top: '17%', right: '11%', size: 11, opacity: 0.35 },
+  { top: '28%', left: '7%',   size: 9,  opacity: 0.28 },
+  { top: '40%', right: '6%',  size: 13, opacity: 0.40 },
+  { top: '55%', left: '10%',  size: 10, opacity: 0.30 },
+  { top: '63%', right: '18%', size: 9,  opacity: 0.32 },
+  { top: '72%', left: '22%',  size: 12, opacity: 0.42 },
+  { top: '80%', right: '10%', size: 15, opacity: 0.38 },
+  { top: '87%', left: '8%',   size: 8,  opacity: 0.25 },
+  { top: '91%', right: '28%', size: 11, opacity: 0.33 },
+]
+
 function SplashScreen({ onNext }: { onNext: () => void }) {
   return (
     <div
-      style={{ position: 'absolute', inset: 0, background: '#0D0D0D', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
+      style={{ position: 'absolute', inset: 0, background: '#0C0C0C', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}
       onClick={onNext}
     >
-      {/* Decorative stars */}
-      {[
-        { top: '12%', left: '18%', size: 6, opacity: 0.6 },
-        { top: '20%', right: '14%', size: 4, opacity: 0.4 },
-        { top: '35%', left: '8%', size: 3, opacity: 0.3 },
-        { top: '70%', right: '10%', size: 5, opacity: 0.5 },
-        { top: '75%', left: '20%', size: 3, opacity: 0.35 },
-        { top: '85%', right: '25%', size: 4, opacity: 0.4 },
-      ].map((star, i) => (
-        <div
+      {STARS.map((s, i) => (
+        <span
           key={i}
           style={{
             position: 'absolute',
-            top: star.top,
-            left: (star as { left?: string }).left,
-            right: (star as { right?: string }).right,
-            width: star.size,
-            height: star.size,
-            borderRadius: '50%',
-            background: '#62B830',
-            opacity: star.opacity,
+            top: s.top,
+            left: (s as { left?: string }).left,
+            right: (s as { right?: string }).right,
+            fontSize: s.size,
+            opacity: s.opacity,
+            color: '#D8EE78',
+            lineHeight: 1,
+            userSelect: 'none',
           }}
-        />
+        >
+          ✦
+        </span>
       ))}
 
       {/* Logo */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
         <div style={{
-          width: 100,
-          height: 100,
-          borderRadius: 28,
-          background: '#62B830',
+          width: 96,
+          height: 96,
+          borderRadius: 26,
+          background: '#CDEF60',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-          <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
-            <path d="M26 10C26 10 18 18 18 26C18 30.4 21.6 34 26 34C30.4 34 34 30.4 34 26C34 18 26 10 26 10Z" fill="white" opacity="0.9"/>
-            <path d="M15 20C15 20 10 25 10 30C10 33.3 12.7 36 16 36C19.3 36 22 33.3 22 30C22 25 15 20 15 20Z" fill="white" opacity="0.6"/>
-            <path d="M37 20C37 20 42 25 42 30C42 33.3 39.3 36 36 36C32.7 36 30 33.3 30 30C30 25 37 20 37 20Z" fill="white" opacity="0.6"/>
+          <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <path
+              d="M25 41S9 29.5 9 18.5C9 13.2 13.2 9 18.5 9C21.5 9 24.2 10.5 25 12C25.8 10.5 28.5 9 31.5 9C36.8 9 41 13.2 41 18.5C41 29.5 25 41 25 41Z"
+              stroke="#111111"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+              fill="none"
+            />
           </svg>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <div style={{ color: 'white', fontSize: 28, fontWeight: 700, letterSpacing: -0.5 }}>Wishlist</div>
-          <div style={{ color: '#888', fontSize: 14, marginTop: 6 }}>Списки желаний для важных моментов</div>
+          <div style={{ color: 'white', fontSize: 32, fontWeight: 700, letterSpacing: -0.5 }}>Wishlist</div>
+          <div style={{ color: '#666', fontSize: 14, marginTop: 8, lineHeight: 1.5 }}>
+            Списки желаний для важных моментов
+          </div>
         </div>
       </div>
 
-      <div style={{ position: 'absolute', bottom: 50, color: '#555', fontSize: 13 }}>
+      <div style={{ position: 'absolute', bottom: 52, color: '#444', fontSize: 13 }}>
         Нажмите, чтобы начать
       </div>
     </div>

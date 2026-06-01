@@ -77,6 +77,13 @@ export const useStore = create<AppStore>()(
         return id
       },
     }),
-    { name: 'wishlist-store-v2' }
+    {
+      name: 'wishlist-store-v2',
+      partialize: (state) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { onboardingDone, ...rest } = state
+        return rest
+      },
+    }
   )
 )
