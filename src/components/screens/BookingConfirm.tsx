@@ -36,8 +36,8 @@ export function BookingConfirm({ gift, friend, onDone, onBuyLink, onViewOthers }
         {/* Checkmark */}
         <div style={{ width: 80, height: 80, borderRadius: '50%', background: '#EAF4DF', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 20 }}>
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-            <circle cx="20" cy="20" r="18" stroke="#6BA83A" strokeWidth="2.5" fill="none"/>
-            <path d="M12 20l6 6 10-12" stroke="#6BA83A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="20" cy="20" r="18" stroke="#62B830" strokeWidth="2.5" fill="none"/>
+            <path d="M12 20l6 6 10-12" stroke="#62B830" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </div>
 
@@ -52,13 +52,13 @@ export function BookingConfirm({ gift, friend, onDone, onBuyLink, onViewOthers }
             </div>
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: 14, fontWeight: 600, color: '#111', marginBottom: 4 }}>{gift.name}</div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#6BA83A' }}>{formatPrice(gift.price)}</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#62B830' }}>{formatPrice(gift.price)}</div>
               <div style={{ marginTop: 4 }}><ShopBadge shop={gift.shop} /></div>
             </div>
           </div>
           <span style={{
             background: gift.priority === 'high' ? '#EAF4DF' : '#F5F5F5',
-            color: gift.priority === 'high' ? '#6BA83A' : '#888',
+            color: gift.priority === 'high' ? '#62B830' : '#888',
             fontSize: 11,
             fontWeight: 600,
             padding: '3px 10px',
@@ -85,7 +85,7 @@ export function BookingConfirm({ gift, friend, onDone, onBuyLink, onViewOthers }
           <button
             onClick={onBuyLink}
             className="press"
-            style={{ width: '100%', height: 62, borderRadius: 14, background: '#6BA83A', color: 'white', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 14, padding: '0 18px', textAlign: 'left' }}
+            style={{ width: '100%', height: 62, borderRadius: 14, background: '#62B830', color: 'white', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 14, padding: '0 18px', textAlign: 'left' }}
           >
             <span style={{ fontSize: 22 }}>🛒</span>
             <div>

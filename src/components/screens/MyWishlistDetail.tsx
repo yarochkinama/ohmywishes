@@ -48,7 +48,7 @@ export function MyWishlistDetail({ wishlist, onBack, onAdd, onShare, onEdit }: M
             <button
               onClick={onShare}
               className="press"
-              style={{ padding: '7px 16px', borderRadius: 100, border: '1px solid #6BA83A', background: 'white', color: '#6BA83A', fontSize: 13, fontWeight: 500, cursor: 'pointer' }}
+              style={{ padding: '7px 16px', borderRadius: 100, border: '1px solid #62B830', background: 'white', color: '#62B830', fontSize: 13, fontWeight: 500, cursor: 'pointer' }}
             >
               Поделиться
             </button>
@@ -67,7 +67,7 @@ export function MyWishlistDetail({ wishlist, onBack, onAdd, onShare, onEdit }: M
           <button
             onClick={onAdd}
             className="press"
-            style={{ width: '100%', height: 54, borderRadius: 14, background: '#6BA83A', color: 'white', fontWeight: 600, fontSize: 16, border: 'none', cursor: 'pointer' }}
+            style={{ width: '100%', height: 54, borderRadius: 14, background: '#62B830', color: 'white', fontWeight: 600, fontSize: 16, border: 'none', cursor: 'pointer' }}
           >
             + Добавить подарок
           </button>
@@ -82,12 +82,12 @@ export function MyWishlistDetail({ wishlist, onBack, onAdd, onShare, onEdit }: M
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontSize: 15, fontWeight: 600, color: '#111', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: 4 }}>{gift.name}</div>
-                <div style={{ fontSize: 14, fontWeight: 700, color: '#6BA83A' }}>{formatPrice(gift.price)}</div>
+                <div style={{ fontSize: 14, fontWeight: 700, color: '#62B830' }}>{formatPrice(gift.price)}</div>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
                 <span style={{
                   background: gift.priority === 'high' ? '#EAF4DF' : '#F5F5F5',
-                  color: gift.priority === 'high' ? '#6BA83A' : '#888',
+                  color: gift.priority === 'high' ? '#62B830' : '#888',
                   fontSize: 11,
                   fontWeight: 600,
                   padding: '3px 10px',

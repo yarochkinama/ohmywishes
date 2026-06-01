@@ -76,7 +76,7 @@ function SplashScreen({ onNext }: { onNext: () => void }) {
             width: star.size,
             height: star.size,
             borderRadius: '50%',
-            background: '#6BA83A',
+            background: '#62B830',
             opacity: star.opacity,
           }}
         />
@@ -88,7 +88,7 @@ function SplashScreen({ onNext }: { onNext: () => void }) {
           width: 100,
           height: 100,
           borderRadius: 28,
-          background: '#6BA83A',
+          background: '#62B830',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -187,7 +187,7 @@ function OnboardingSlide({
             width: '100%',
             height: 56,
             borderRadius: 16,
-            background: isLast ? '#6BA83A' : '#111111',
+            background: isLast ? '#62B830' : '#111111',
             color: 'white',
             fontWeight: 600,
             fontSize: 17,

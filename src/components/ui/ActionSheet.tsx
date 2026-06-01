@@ -20,7 +20,7 @@ export function ActionSheet({ actions, onClose }: ActionSheetProps) {
   }, [onClose])
 
   const colorMap = {
-    green: '#6BA83A',
+    green: '#62B830',
     red: '#FF3B30',
     default: '#111',
   }

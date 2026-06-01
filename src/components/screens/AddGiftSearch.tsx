@@ -67,14 +67,14 @@ export function AddGiftSearch({ onBack, onGiftFound }: AddGiftSearchProps) {
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 14, fontWeight: 600, color: '#111', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{r.name}</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 4 }}>
-                      <span style={{ fontSize: 14, fontWeight: 700, color: '#6BA83A' }}>{formatPrice(r.price)}</span>
+                      <span style={{ fontSize: 14, fontWeight: 700, color: '#62B830' }}>{formatPrice(r.price)}</span>
                       <span style={{ background: r.shopColor, color: 'white', fontSize: 11, fontWeight: 700, padding: '2px 7px', borderRadius: 6 }}>{r.shop}</span>
                     </div>
                   </div>
                   <button
                     onClick={() => onGiftFound({ name: r.name, price: r.price, shop: r.shop })}
                     className="press"
-                    style={{ width: 32, height: 32, borderRadius: '50%', background: '#6BA83A', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 18, fontWeight: 700, flexShrink: 0 }}
+                    style={{ width: 32, height: 32, borderRadius: '50%', background: '#62B830', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 18, fontWeight: 700, flexShrink: 0 }}
                   >
                     +
                   </button>
@@ -88,7 +88,7 @@ export function AddGiftSearch({ onBack, onGiftFound }: AddGiftSearchProps) {
             <div style={{ marginBottom: 24 }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
                 <span style={{ fontSize: 16, fontWeight: 700, color: '#111' }}>Маркетплейсы</span>
-                <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6BA83A', fontSize: 13 }}>Смотреть все</button>
+                <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13 }}>Смотреть все</button>
               </div>
               <div className="scroll-x" style={{ display: 'flex', gap: 12 }}>
                 {MARKETPLACES.map((mp, i) => (

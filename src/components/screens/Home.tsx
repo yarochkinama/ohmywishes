@@ -43,21 +43,31 @@ export function Home({ onFriendWishlist }: HomeProps) {
         </div>
 
         {/* Hero card */}
-        <div style={{ margin: '0 20px 20px', borderRadius: 16, background: 'linear-gradient(135deg, #EAF4DF, #D0EBBA)', padding: '16px 16px 12px', position: 'relative', overflow: 'hidden', minHeight: 110 }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontSize: 20, fontWeight: 700, color: '#111', lineHeight: 1.2, marginBottom: 6 }}>
-                Подобрать<br />подарок
+        <div style={{ margin: '0 20px 20px', borderRadius: 20, background: 'linear-gradient(135deg, #E8F8D5, #C8E89A)', position: 'relative', overflow: 'hidden', minHeight: 140 }}>
+          <div style={{ display: 'flex', alignItems: 'stretch', minHeight: 140 }}>
+            <div style={{ flex: 1, padding: '18px 0 18px 18px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <span style={{ fontSize: 18, lineHeight: 1 }}>✦</span>
+                <div style={{ fontSize: 22, fontWeight: 700, color: '#111', lineHeight: 1.2, marginTop: 4, marginBottom: 6 }}>
+                  Подобрать<br />подарок
+                </div>
+                <div style={{ fontSize: 12, color: '#555', marginBottom: 14 }}>Быстрый квиз подберёт идеи за 1 минуту</div>
               </div>
-              <div style={{ fontSize: 12, color: '#888', marginBottom: 12 }}>Быстрый квиз подберёт идеи за 1 минуту</div>
               <button
                 className="press"
-                style={{ background: '#6BA83A', color: 'white', fontSize: 12, fontWeight: 600, padding: '5px 14px', borderRadius: 100, border: 'none', cursor: 'pointer' }}
+                style={{ background: 'white', color: '#62B830', fontSize: 13, fontWeight: 600, padding: '7px 16px', borderRadius: 100, border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}
               >
                 Пройти квиз →
               </button>
             </div>
-            <span style={{ fontSize: 50, marginLeft: 12 }}>🎁</span>
+            <div style={{ width: 150, position: 'relative', flexShrink: 0 }}>
+              <img
+                src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=300&h=280&fit=crop&auto=format&q=80"
+                alt="gift"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"/>'; e.currentTarget.style.display = 'none'; (e.currentTarget.parentElement as HTMLElement).innerHTML = '<span style="font-size:64px;display:flex;align-items:center;justify-content:center;height:100%">🎁</span>' }}
+              />
+            </div>
           </div>
         </div>
 
@@ -99,7 +109,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
         <div style={{ padding: '0 20px 20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Популярные категории</span>
-            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6BA83A', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
+            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
           </div>
           <div className="scroll-x" style={{ display: 'flex', gap: 10 }}>
             {categories.map((cat, i) => (
@@ -115,7 +125,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
         <div style={{ padding: '0 20px 20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Идеи для вас</span>
-            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6BA83A', fontSize: 13, fontWeight: 500 }}>Ещё идеи</button>
+            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13, fontWeight: 500 }}>Ещё идеи</button>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
             {HOME_IDEAS.map(idea => (
@@ -139,8 +149,8 @@ export function Home({ onFriendWishlist }: HomeProps) {
                 <div style={{ padding: '10px 10px 10px' }}>
                   <div style={{ fontSize: 12, fontWeight: 500, color: '#111', lineHeight: 1.4, marginBottom: 6, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{idea.name}</div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 13, fontWeight: 700, color: '#6BA83A' }}>{formatPrice(idea.price)}</span>
-                    <button className="press" style={{ width: 28, height: 28, borderRadius: '50%', background: '#6BA83A', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 16, fontWeight: 700 }}>+</button>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: '#62B830' }}>{formatPrice(idea.price)}</span>
+                    <button className="press" style={{ width: 28, height: 28, borderRadius: '50%', background: '#62B830', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 16, fontWeight: 700 }}>+</button>
                   </div>
                 </div>
               </div>
@@ -152,7 +162,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
         <div style={{ padding: '0 20px 24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Вишлисты друзей</span>
-            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6BA83A', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
+            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
           </div>
           <div className="scroll-x" style={{ display: 'flex', gap: 10 }}>
             {FRIENDS.slice(0, 4).map(friend => (

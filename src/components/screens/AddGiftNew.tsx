@@ -82,7 +82,7 @@ export function AddGiftNew({ wishlistId: _wishlistId, onBack, onLink, onSearch, 
         <div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Идеи вдохновения</span>
-            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6BA83A', fontSize: 13 }}>Смотреть все</button>
+            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13 }}>Смотреть все</button>
           </div>
           <div className="scroll-x" style={{ display: 'flex', gap: 10 }}>
             {categories.map((cat, i) => (

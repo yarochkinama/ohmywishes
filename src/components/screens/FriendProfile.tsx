@@ -14,7 +14,7 @@ function PriorityBadge({ priority }: { priority: string }) {
   return (
     <span style={{
       background: high ? '#EAF4DF' : '#F5F5F5',
-      color: high ? '#6BA83A' : '#888',
+      color: high ? '#62B830' : '#888',
       fontSize: 11,
       fontWeight: 600,
       padding: '3px 10px',
@@ -67,7 +67,7 @@ export function FriendProfile({ friend, onWishlist, onBack }: FriendProfileProps
         <div style={{ padding: '0 20px 20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Списки {friend.name}</span>
-            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6BA83A', fontSize: 13 }}>Смотреть все</button>
+            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13 }}>Смотреть все</button>
           </div>
           <div className="scroll-x" style={{ display: 'flex', gap: 10 }}>
             {friend.wishlists.map(wl => (
@@ -99,7 +99,7 @@ export function FriendProfile({ friend, onWishlist, onBack }: FriendProfileProps
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontSize: 14, fontWeight: 600, color: '#111', marginBottom: 4, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{gift.name}</div>
-                  <div style={{ fontSize: 14, fontWeight: 700, color: '#6BA83A' }}>{formatPrice(gift.price)}</div>
+                  <div style={{ fontSize: 14, fontWeight: 700, color: '#62B830' }}>{formatPrice(gift.price)}</div>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
                   <PriorityBadge priority={gift.priority} />
@@ -115,7 +115,7 @@ export function FriendProfile({ friend, onWishlist, onBack }: FriendProfileProps
           <button
             onClick={() => friend.wishlists[0] && onWishlist(friend.wishlists[0].id)}
             className="press"
-            style={{ width: '100%', height: 54, borderRadius: 14, border: '1.5px solid #6BA83A', background: 'white', color: '#6BA83A', fontWeight: 600, fontSize: 16, cursor: 'pointer' }}
+            style={{ width: '100%', height: 54, borderRadius: 14, border: '1.5px solid #62B830', background: 'white', color: '#62B830', fontWeight: 600, fontSize: 16, cursor: 'pointer' }}
           >
             Посмотреть все подарки {friend.name}
           </button>

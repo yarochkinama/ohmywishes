@@ -43,7 +43,7 @@ export function Favorites() {
                 cursor: 'pointer',
                 fontSize: 14,
                 fontWeight: 600,
-                background: toggle === t ? '#6BA83A' : 'transparent',
+                background: toggle === t ? '#62B830' : 'transparent',
                 color: toggle === t ? 'white' : '#888',
               }}
             >
@@ -68,9 +68,9 @@ export function Favorites() {
                 padding: '6px 14px',
                 borderRadius: 100,
                 border: '1px solid',
-                borderColor: filter === id ? '#6BA83A' : '#E0E0E0',
+                borderColor: filter === id ? '#62B830' : '#E0E0E0',
                 background: filter === id ? '#EAF4DF' : 'white',
-                color: filter === id ? '#6BA83A' : '#888',
+                color: filter === id ? '#62B830' : '#888',
                 fontSize: 13,
                 fontWeight: 500,
                 cursor: 'pointer',
@@ -84,7 +84,7 @@ export function Favorites() {
         {/* Section header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px 12px' }}>
           <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Сохранённые идеи</span>
-          <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#6BA83A', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
+          <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
         </div>
 
         {/* Grid */}
@@ -95,21 +95,21 @@ export function Favorites() {
               <div style={{ height: 120, background: item.imageBg, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
                 <span style={{ fontSize: 36 }}>{item.image}</span>
                 <button className="press" style={{ position: 'absolute', top: 8, right: 8, background: 'white', border: 'none', borderRadius: '50%', width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', boxShadow: '0 1px 4px rgba(0,0,0,0.1)' }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="#6BA83A" stroke="#6BA83A" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="#62B830" stroke="#62B830" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                 </button>
               </div>
               {/* Info */}
               <div style={{ padding: '10px 10px 10px' }}>
                 <div style={{ fontSize: 12, fontWeight: 500, color: '#111', lineHeight: 1.4, marginBottom: 4, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{item.name}</div>
-                <div style={{ fontSize: 13, fontWeight: 700, color: '#6BA83A', marginBottom: 6 }}>{formatPrice(item.price)}</div>
+                <div style={{ fontSize: 13, fontWeight: 700, color: '#62B830', marginBottom: 6 }}>{formatPrice(item.price)}</div>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                   <span style={{ fontSize: 10, color: '#888' }}>{item.source}</span>
                   {item.sourceType === 'friend' ? (
                     <button className="press" style={{ width: 28, height: 28, borderRadius: '50%', background: '#EAF4DF', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6BA83A" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#62B830" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
                     </button>
                   ) : (
-                    <button className="press" style={{ width: 28, height: 28, borderRadius: '50%', background: '#6BA83A', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 16, fontWeight: 700 }}>+</button>
+                    <button className="press" style={{ width: 28, height: 28, borderRadius: '50%', background: '#62B830', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 16, fontWeight: 700 }}>+</button>
                   )}
                 </div>
               </div>
