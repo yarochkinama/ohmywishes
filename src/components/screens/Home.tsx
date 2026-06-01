@@ -8,17 +8,17 @@ interface HomeProps {
 }
 
 const categories = [
-  { img: 'https://images.unsplash.com/photo-1596436889106-be35e843f974?w=160&h=160&fit=crop&auto=format&q=80', label: 'для неё' },
-  { img: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=160&h=160&fit=crop&auto=format&q=80', label: 'для него' },
-  { img: 'https://images.unsplash.com/photo-1558636508-e0969431e4b9?w=160&h=160&fit=crop&auto=format&q=80', label: 'день\nрождения' },
-  { img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=160&h=160&fit=crop&auto=format&q=80', label: 'впечатления' },
+  { img: '/cat-for-her.jpg', label: 'для неё' },
+  { img: '/cat-for-him.jpg', label: 'для него' },
+  { img: '/cat-bday.jpg', label: 'день\nрождения' },
+  { img: '/cat-vibes.jpg', label: 'впечатления' },
 ]
 
 const quickActions = [
-  { emoji: '🎁', label: 'Подобрать подарок', sub: 'Идти по парам шагов' },
-  { emoji: '💚', label: 'Вишлист друга', sub: 'Выбрать из вишлиста' },
-  { emoji: '👤', label: 'Квиз получателя', sub: 'Угадать, что хочет' },
-  { emoji: '🔧', label: 'Фильтры и поводы', sub: 'Уточнить выбор' },
+  { emoji: '🎁', label: 'Подобрать подарок' },
+  { emoji: '💚', label: 'Вишлист друга' },
+  { emoji: '👤', label: 'Квиз получателя' },
+  { emoji: '🔧', label: 'Фильтры и поводы' },
 ]
 
 function ShopBadge({ shop }: { shop: string | null }) {
@@ -85,19 +85,17 @@ export function Home({ onFriendWishlist }: HomeProps) {
                 display: 'flex',
                 alignItems: 'center',
                 gap: 10,
-                padding: '12px 12px',
+                padding: '14px 12px',
                 borderRadius: 16,
                 border: '1px solid #F0F0F0',
                 background: 'white',
                 cursor: 'pointer',
                 textAlign: 'left',
-                minHeight: 70,
               }}
             >
               <span style={{ fontSize: 22 }}>{qa.emoji}</span>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: 12, fontWeight: 600, color: '#111', lineHeight: 1.3 }}>{qa.label}</div>
-                <div style={{ fontSize: 10, color: '#888', marginTop: 2 }}>{qa.sub}</div>
+                <div style={{ fontSize: 13, fontWeight: 600, color: '#111', lineHeight: 1.3 }}>{qa.label}</div>
               </div>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CCC" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
             </button>
