@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import { StatusBar } from '../ui/StatusBar'
-import { useStore } from '@/lib/store'
 
 type Stage = 'splash' | 'ob1' | 'ob2' | 'ob3' | 'auth'
 
@@ -355,9 +354,8 @@ function AuthScreen({ onDone }: { onDone: () => void }) {
   )
 }
 
-export function Onboarding() {
+export function Onboarding({ onDone }: { onDone: () => void }) {
   const [stage, setStage] = useState<Stage>('splash')
-  const { setOnboardingDone } = useStore()
 
   const obIndex = stage === 'ob1' ? 0 : stage === 'ob2' ? 1 : stage === 'ob3' ? 2 : -1
 
@@ -366,11 +364,11 @@ export function Onboarding() {
     else if (stage === 'ob1') setStage('ob2')
     else if (stage === 'ob2') setStage('ob3')
     else if (stage === 'ob3') setStage('auth')
-    else if (stage === 'auth') setOnboardingDone()
+    else if (stage === 'auth') onDone()
   }
 
   if (stage === 'splash') return <SplashScreen onNext={goNext} />
-  if (stage === 'auth') return <AuthScreen onDone={setOnboardingDone} />
+  if (stage === 'auth') return <AuthScreen onDone={onDone} />
 
   const slide = onboardingSlides[obIndex]
   if (!slide) return null

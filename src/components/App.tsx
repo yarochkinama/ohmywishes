@@ -39,7 +39,8 @@ type Screen =
 const BOTTOM_NAV_SCREENS = ['home', 'favorites', 'friends', 'profile']
 
 export function App() {
-  const { onboardingDone, friends, myWishlists, bookGift, cancelBooking } = useStore()
+  const { friends, myWishlists, bookGift, cancelBooking } = useStore()
+  const [onboardingDone, setOnboardingDone] = useState(false)
   const [screen, setScreen] = useState<Screen>({ id: 'home' })
   const [activeTab, setActiveTab] = useState('home')
   const [dir, setDir] = useState<'fwd' | 'back'>('fwd')
@@ -63,7 +64,7 @@ export function App() {
   if (!onboardingDone) {
     return (
       <div style={{ position: 'absolute', inset: 0, overflow: 'hidden' }}>
-        <Onboarding />
+        <Onboarding onDone={() => setOnboardingDone(true)} />
       </div>
     )
   }
