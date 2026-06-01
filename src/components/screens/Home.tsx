@@ -62,10 +62,9 @@ export function Home({ onFriendWishlist }: HomeProps) {
             </div>
             <div style={{ width: 150, position: 'relative', flexShrink: 0 }}>
               <img
-                src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=300&h=280&fit=crop&auto=format&q=80"
+                src="/hero-gift.webp"
                 alt="gift"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                onError={(e) => { (e.currentTarget as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"/>'; e.currentTarget.style.display = 'none'; (e.currentTarget.parentElement as HTMLElement).innerHTML = '<span style="font-size:64px;display:flex;align-items:center;justify-content:center;height:100%">🎁</span>' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', objectPosition: 'center top' }}
               />
             </div>
           </div>
