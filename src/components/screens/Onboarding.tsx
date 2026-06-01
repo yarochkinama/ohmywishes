@@ -6,9 +6,49 @@ import { useStore } from '@/lib/store'
 type Stage = 'splash' | 'ob1' | 'ob2' | 'ob3' | 'auth'
 
 const onboardingSlides = [
-  { stage: 'ob1' as Stage, emoji: '📋', title: 'Создавайте списки желаний', desc: 'Добавляйте всё, что хотите получить на день рождения, Новый год или любой другой повод.' },
-  { stage: 'ob2' as Stage, emoji: '👥', title: 'Делитесь с близкими', desc: 'Отправляйте список друзьям и семье, чтобы они знали, что подарить.' },
-  { stage: 'ob3' as Stage, emoji: '🎁', title: 'Получайте то, что хотите', desc: 'Больше никаких неудачных подарков — только то, что действительно радует.' },
+  {
+    stage: 'ob1' as Stage,
+    illustration: (
+      <div style={{ position: 'relative', width: 220, height: 220, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ position: 'absolute', width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, #EAF4DF 0%, rgba(234,244,223,0) 70%)' }} />
+        <span style={{ fontSize: 130, lineHeight: 1, filter: 'drop-shadow(0 8px 24px rgba(107,168,58,0.25))' }}>📋</span>
+        <span style={{ position: 'absolute', bottom: 20, left: 10, fontSize: 36 }}>🩵</span>
+        <span style={{ position: 'absolute', top: 10, right: 10, fontSize: 20, opacity: 0.7 }}>✦</span>
+        <span style={{ position: 'absolute', bottom: 30, right: 16, fontSize: 14, opacity: 0.5 }}>✦</span>
+      </div>
+    ),
+    title: 'Создавайте списки\nжеланий',
+    desc: 'Добавляйте всё, что хотите получить на день рождения, Новый год или любой другой повод.',
+  },
+  {
+    stage: 'ob2' as Stage,
+    illustration: (
+      <div style={{ position: 'relative', width: 220, height: 220, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ position: 'absolute', width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, #EAF4DF 0%, rgba(234,244,223,0) 70%)' }} />
+        <span style={{ fontSize: 110, lineHeight: 1, filter: 'drop-shadow(0 8px 24px rgba(107,168,58,0.2))' }}>🔗</span>
+        <span style={{ position: 'absolute', top: 20, left: 12, fontSize: 60 }}>👧</span>
+        <span style={{ position: 'absolute', bottom: 20, right: 8, fontSize: 60 }}>👦</span>
+        <span style={{ position: 'absolute', bottom: 50, left: 22, fontSize: 22 }}>💚</span>
+      </div>
+    ),
+    title: 'Делитесь с близкими',
+    desc: 'Отправляйте список друзьям и семье, чтобы они знали, что подарить.',
+  },
+  {
+    stage: 'ob3' as Stage,
+    illustration: (
+      <div style={{ position: 'relative', width: 220, height: 220, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ position: 'absolute', width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, #EAF4DF 0%, rgba(234,244,223,0) 70%)' }} />
+        <span style={{ fontSize: 130, lineHeight: 1, filter: 'drop-shadow(0 8px 28px rgba(107,168,58,0.3))' }}>🎁</span>
+        <span style={{ position: 'absolute', top: 16, right: 14, fontSize: 28 }}>💚</span>
+        <span style={{ position: 'absolute', bottom: 22, left: 14, fontSize: 22 }}>🩶</span>
+        <span style={{ position: 'absolute', top: 28, left: 18, fontSize: 18, opacity: 0.6 }}>✦</span>
+        <span style={{ position: 'absolute', bottom: 16, right: 20, fontSize: 14, opacity: 0.5 }}>✦</span>
+      </div>
+    ),
+    title: 'Получайте то,\nчто хотите',
+    desc: 'Больше никаких неудачных подарков — только то, что действительно радует.',
+  },
 ]
 
 function SplashScreen({ onNext }: { onNext: () => void }) {
@@ -89,72 +129,77 @@ function OnboardingSlide({
   return (
     <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', background: '#fff' }}>
       <StatusBar />
-      {/* Skip */}
-      <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '4px 20px 0' }}>
+
+      {/* Skip chip */}
+      <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '8px 20px 0' }}>
         <button
           onClick={onSkip}
           className="press"
-          style={{ color: '#888', fontSize: 14, background: 'none', border: 'none', cursor: 'pointer', padding: '8px 0' }}
+          style={{
+            color: '#333',
+            fontSize: 13,
+            fontWeight: 500,
+            background: '#F0F0F0',
+            border: 'none',
+            borderRadius: 100,
+            cursor: 'pointer',
+            padding: '6px 14px',
+          }}
         >
           Пропустить
         </button>
       </div>
 
-      {/* Illustration */}
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '0 32px' }}>
-        <div style={{
-          width: 160,
-          height: 160,
-          borderRadius: '50%',
-          background: '#EAF4DF',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginBottom: 36,
-        }}>
-          <span style={{ fontSize: 80 }}>{slide.emoji}</span>
-        </div>
-        <h2 style={{ fontSize: 24, fontWeight: 700, color: '#111', textAlign: 'center', marginBottom: 12, lineHeight: 1.3 }}>
-          {slide.title}
-        </h2>
-        <p style={{ fontSize: 15, color: '#888', textAlign: 'center', lineHeight: 1.6 }}>
-          {slide.desc}
-        </p>
+      {/* Illustration — top half */}
+      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        {slide.illustration}
       </div>
 
-      {/* Bottom */}
-      <div style={{ padding: '0 20px 40px' }}>
+      {/* Bottom section */}
+      <div style={{ padding: '0 28px 44px' }}>
         {/* Dots */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 8, marginBottom: 24 }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 6, marginBottom: 24 }}>
           {Array.from({ length: total }).map((_, i) => (
             <div
               key={i}
               style={{
-                width: i === index ? 20 : 7,
-                height: 7,
-                borderRadius: 100,
-                background: i === index ? '#6BA83A' : '#E0E0E0',
-                transition: 'width 0.2s',
+                width: 8,
+                height: 8,
+                borderRadius: '50%',
+                background: i === index ? '#111' : '#D8D8D8',
+                transition: 'background 0.2s',
               }}
             />
           ))}
         </div>
+
+        <h2 style={{ fontSize: 26, fontWeight: 700, color: '#111', textAlign: 'center', marginBottom: 12, lineHeight: 1.25, whiteSpace: 'pre-line' }}>
+          {slide.title}
+        </h2>
+        <p style={{ fontSize: 15, color: '#888', textAlign: 'center', lineHeight: 1.6, marginBottom: 28 }}>
+          {slide.desc}
+        </p>
+
         <button
           onClick={onNext}
           className="press"
           style={{
             width: '100%',
-            height: 54,
-            borderRadius: 14,
-            background: '#6BA83A',
+            height: 56,
+            borderRadius: 16,
+            background: isLast ? '#6BA83A' : '#111111',
             color: 'white',
             fontWeight: 600,
-            fontSize: 16,
+            fontSize: 17,
             border: 'none',
             cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 8,
           }}
         >
-          {isLast ? 'Начать →' : 'Далее'}
+          {isLast ? <>Начать <span style={{ fontSize: 20 }}>→</span></> : 'Далее'}
         </button>
       </div>
     </div>
