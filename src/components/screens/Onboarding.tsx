@@ -7,185 +7,19 @@ type Stage = 'splash' | 'ob1' | 'ob2' | 'ob3' | 'auth'
 const onboardingSlides = [
   {
     stage: 'ob1' as Stage,
-    illustration: (
-      <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="ob1glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#C4EE88" stopOpacity="0.45"/>
-            <stop offset="100%" stopColor="#C4EE88" stopOpacity="0"/>
-          </radialGradient>
-          <filter id="ob1sh" x="-25%" y="-25%" width="150%" height="150%">
-            <feDropShadow dx="0" dy="8" stdDeviation="14" floodOpacity="0.09"/>
-          </filter>
-          <filter id="ob1ba" x="-40%" y="-40%" width="180%" height="180%">
-            <feDropShadow dx="0" dy="4" stdDeviation="8" floodOpacity="0.14"/>
-          </filter>
-        </defs>
-        <ellipse cx="140" cy="138" rx="110" ry="108" fill="url(#ob1glow)"/>
-        {/* clip */}
-        <rect x="108" y="44" width="64" height="30" rx="9" fill="#C0C0C0"/>
-        <rect x="118" y="48" width="44" height="22" rx="7" fill="#ADADAD"/>
-        <rect x="127" y="52" width="26" height="14" rx="4" fill="#9E9E9E"/>
-        {/* body */}
-        <rect x="62" y="58" width="162" height="180" rx="16" fill="white" filter="url(#ob1sh)"/>
-        {/* row 1 checked */}
-        <rect x="94" y="106" width="98" height="14" rx="7" fill="#F3F3F3"/>
-        <circle cx="82" cy="113" r="10" fill="rgba(98,184,48,0.15)"/>
-        <path d="M76 113 L80.5 117.5 L89 106" stroke="#62B830" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"/>
-        {/* row 2 checked */}
-        <rect x="94" y="133" width="86" height="14" rx="7" fill="#F3F3F3"/>
-        <circle cx="82" cy="140" r="10" fill="rgba(98,184,48,0.15)"/>
-        <path d="M76 140 L80.5 144.5 L89 133" stroke="#62B830" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"/>
-        {/* row 3 empty */}
-        <rect x="94" y="160" width="92" height="14" rx="7" fill="#F3F3F3"/>
-        <circle cx="82" cy="167" r="10" stroke="#E0E0E0" strokeWidth="1.5" fill="none"/>
-        {/* green heart badge */}
-        <rect x="52" y="196" width="64" height="64" rx="20" fill="#62B830" filter="url(#ob1ba)"/>
-        <path d="M84 231 C84 231 67 220 67 210 C67 205.4 70.8 201.6 75.4 201.6 C78.2 201.6 80.7 203.2 84 206 C87.3 203.2 89.8 201.6 92.6 201.6 C97.2 201.6 101 205.4 101 210 C101 220 84 231 84 231Z" fill="white"/>
-        {/* sparkle top-right */}
-        <g transform="translate(202,74)" opacity="0.88">
-          <line x1="0" y1="-13" x2="0" y2="13" stroke="#9ED838" strokeWidth="2.2" strokeLinecap="round"/>
-          <line x1="-13" y1="0" x2="13" y2="0" stroke="#9ED838" strokeWidth="2.2" strokeLinecap="round"/>
-          <line x1="-8" y1="-8" x2="8" y2="8" stroke="#9ED838" strokeWidth="1" strokeLinecap="round"/>
-          <line x1="8" y1="-8" x2="-8" y2="8" stroke="#9ED838" strokeWidth="1" strokeLinecap="round"/>
-        </g>
-        {/* sparkle left */}
-        <g transform="translate(46,130)" opacity="0.62">
-          <line x1="0" y1="-9" x2="0" y2="9" stroke="#9ED838" strokeWidth="1.8" strokeLinecap="round"/>
-          <line x1="-9" y1="0" x2="9" y2="0" stroke="#9ED838" strokeWidth="1.8" strokeLinecap="round"/>
-        </g>
-        {/* sparkle bottom-right */}
-        <g transform="translate(214,202)" opacity="0.72">
-          <line x1="0" y1="-9" x2="0" y2="9" stroke="#AEDC44" strokeWidth="1.8" strokeLinecap="round"/>
-          <line x1="-9" y1="0" x2="9" y2="0" stroke="#AEDC44" strokeWidth="1.8" strokeLinecap="round"/>
-        </g>
-      </svg>
-    ),
+    illustration: <img src="/ob-clipboard.png" alt="" style={{ width: '100%', maxWidth: 380, objectFit: 'contain' }} />,
     title: 'Создавайте списки\nжеланий',
     desc: 'Добавляйте всё, что хотите получить на день рождения, Новый год или любой другой повод.',
   },
   {
     stage: 'ob2' as Stage,
-    illustration: (
-      <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="ob2glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#C4EE88" stopOpacity="0.4"/>
-            <stop offset="100%" stopColor="#C4EE88" stopOpacity="0"/>
-          </radialGradient>
-          <radialGradient id="gBg" cx="38%" cy="32%" r="65%">
-            <stop offset="0%" stopColor="#7DD89A"/>
-            <stop offset="100%" stopColor="#48A86E"/>
-          </radialGradient>
-          <radialGradient id="bBg" cx="38%" cy="32%" r="65%">
-            <stop offset="0%" stopColor="#7ABFE8"/>
-            <stop offset="100%" stopColor="#4892C2"/>
-          </radialGradient>
-          <filter id="ob2card" x="-35%" y="-35%" width="170%" height="170%">
-            <feDropShadow dx="0" dy="6" stdDeviation="10" floodOpacity="0.11"/>
-          </filter>
-        </defs>
-        <ellipse cx="140" cy="140" rx="110" ry="108" fill="url(#ob2glow)"/>
-        {/* girl circle */}
-        <circle cx="98" cy="120" r="62" fill="url(#gBg)"/>
-        <circle cx="98" cy="113" r="29" fill="#F7CAAA"/>
-        <path d="M70 101 Q98 77 126 101 Q126 88 98 79 Q70 88 70 101Z" fill="#4A2E1A"/>
-        <path d="M70 101 Q64 118 68 130" stroke="#4A2E1A" strokeWidth="11" fill="none" strokeLinecap="round"/>
-        <path d="M126 101 Q132 118 128 130" stroke="#4A2E1A" strokeWidth="11" fill="none" strokeLinecap="round"/>
-        <ellipse cx="90" cy="115" rx="3.5" ry="4" fill="#2A1810"/>
-        <ellipse cx="106" cy="115" rx="3.5" ry="4" fill="#2A1810"/>
-        <path d="M90 126 Q98 132 106 126" stroke="#D4906A" strokeWidth="2" fill="none" strokeLinecap="round"/>
-        {/* boy circle */}
-        <circle cx="182" cy="168" r="62" fill="url(#bBg)"/>
-        <circle cx="182" cy="160" r="29" fill="#F7CAAA"/>
-        <path d="M154 149 Q182 127 210 149 Q210 138 182 130 Q154 138 154 149Z" fill="#5A3820"/>
-        <ellipse cx="174" cy="163" rx="3.5" ry="4" fill="#2A1810"/>
-        <ellipse cx="190" cy="163" rx="3.5" ry="4" fill="#2A1810"/>
-        <path d="M174 173 Q182 179 190 173" stroke="#D4906A" strokeWidth="2" fill="none" strokeLinecap="round"/>
-        {/* white card with link */}
-        <rect x="116" y="128" width="66" height="66" rx="19" fill="white" filter="url(#ob2card)"/>
-        {/* Chain link — two interlocked oval rings */}
-        <ellipse cx="143" cy="153" rx="13" ry="8" transform="rotate(-45 143 153)" stroke="#62B830" strokeWidth="2.8" fill="none"/>
-        <ellipse cx="156" cy="168" rx="13" ry="8" transform="rotate(-45 156 168)" stroke="#62B830" strokeWidth="2.8" fill="none"/>
-        {/* green heart */}
-        <path d="M88 214 C88 214 73 204 73 194 C73 189.6 76.6 186 81 186 C83.7 186 86.1 187.5 88 190 C89.9 187.5 92.3 186 95 186 C99.4 186 103 189.6 103 194 C103 204 88 214 88 214Z" fill="#62B830"/>
-        {/* sparkles */}
-        <g transform="translate(50,72)" opacity="0.72">
-          <line x1="0" y1="-12" x2="0" y2="12" stroke="#9ED838" strokeWidth="2.2" strokeLinecap="round"/>
-          <line x1="-12" y1="0" x2="12" y2="0" stroke="#9ED838" strokeWidth="2.2" strokeLinecap="round"/>
-          <line x1="-7" y1="-7" x2="7" y2="7" stroke="#9ED838" strokeWidth="1" strokeLinecap="round"/>
-          <line x1="7" y1="-7" x2="-7" y2="7" stroke="#9ED838" strokeWidth="1" strokeLinecap="round"/>
-        </g>
-        <g transform="translate(218,96)" opacity="0.62">
-          <line x1="0" y1="-9" x2="0" y2="9" stroke="#AEDC44" strokeWidth="1.8" strokeLinecap="round"/>
-          <line x1="-9" y1="0" x2="9" y2="0" stroke="#AEDC44" strokeWidth="1.8" strokeLinecap="round"/>
-        </g>
-        <g transform="translate(170,232)" opacity="0.65">
-          <line x1="0" y1="-8" x2="0" y2="8" stroke="#9ED838" strokeWidth="1.6" strokeLinecap="round"/>
-          <line x1="-8" y1="0" x2="8" y2="0" stroke="#9ED838" strokeWidth="1.6" strokeLinecap="round"/>
-        </g>
-      </svg>
-    ),
+    illustration: <img src="/ob-people.png" alt="" style={{ width: '100%', maxWidth: 380, objectFit: 'contain' }} />,
     title: 'Делитесь с близкими',
     desc: 'Отправляйте список друзьям и семье, чтобы они знали, что подарить.',
   },
   {
     stage: 'ob3' as Stage,
-    illustration: (
-      <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="ob3glow" cx="50%" cy="55%" r="50%">
-            <stop offset="0%" stopColor="#C4EE88" stopOpacity="0.48"/>
-            <stop offset="100%" stopColor="#C4EE88" stopOpacity="0"/>
-          </radialGradient>
-          <filter id="ob3box" x="-25%" y="-25%" width="150%" height="150%">
-            <feDropShadow dx="0" dy="10" stdDeviation="18" floodOpacity="0.10"/>
-          </filter>
-          <filter id="ob3lid" x="-25%" y="-25%" width="150%" height="150%">
-            <feDropShadow dx="0" dy="5" stdDeviation="10" floodOpacity="0.09"/>
-          </filter>
-        </defs>
-        <ellipse cx="140" cy="152" rx="110" ry="102" fill="url(#ob3glow)"/>
-        {/* box body */}
-        <rect x="68" y="160" width="148" height="98" rx="12" fill="white" filter="url(#ob3box)"/>
-        {/* vertical ribbon on body */}
-        <rect x="127" y="160" width="26" height="98" fill="#62B830" opacity="0.9"/>
-        <rect x="68" y="160" width="12" height="98" fill="white"/>
-        <rect x="204" y="160" width="12" height="98" fill="white"/>
-        <rect x="68" y="246" width="148" height="14" rx="12" fill="white"/>
-        {/* lid */}
-        <rect x="60" y="132" width="160" height="40" rx="12" fill="white" filter="url(#ob3lid)"/>
-        {/* horizontal ribbon on lid */}
-        <rect x="60" y="145" width="160" height="14" fill="#62B830" opacity="0.9"/>
-        <rect x="60" y="132" width="160" height="14" rx="12" fill="white"/>
-        <rect x="60" y="160" width="160" height="12" fill="white"/>
-        {/* bow left loop */}
-        <path d="M106 132 C96 118 90 102 101 95 C108 90 117 95 122 106 C127 116 130 124 140 132" fill="#62B830"/>
-        {/* bow right loop */}
-        <path d="M174 132 C184 118 190 102 179 95 C172 90 163 95 158 106 C153 116 150 124 140 132" fill="#62B830"/>
-        {/* bow knot */}
-        <ellipse cx="140" cy="132" rx="11" ry="10" fill="#4CA024"/>
-        {/* floating heart */}
-        <path d="M140 96 C140 96 121 84 121 72 C121 66.2 125.7 61.5 131.5 61.5 C135 61.5 138.1 63.5 140 67 C141.9 63.5 145 61.5 148.5 61.5 C154.3 61.5 159 66.2 159 72 C159 84 140 96 140 96Z" fill="#62B830"/>
-        {/* sparkles */}
-        <g transform="translate(63,122)" opacity="0.76">
-          <line x1="0" y1="-12" x2="0" y2="12" stroke="#9ED838" strokeWidth="2.2" strokeLinecap="round"/>
-          <line x1="-12" y1="0" x2="12" y2="0" stroke="#9ED838" strokeWidth="2.2" strokeLinecap="round"/>
-          <line x1="-7" y1="-7" x2="7" y2="7" stroke="#9ED838" strokeWidth="1" strokeLinecap="round"/>
-          <line x1="7" y1="-7" x2="-7" y2="7" stroke="#9ED838" strokeWidth="1" strokeLinecap="round"/>
-        </g>
-        <g transform="translate(216,140)" opacity="0.72">
-          <line x1="0" y1="-11" x2="0" y2="11" stroke="#AEDC44" strokeWidth="2.1" strokeLinecap="round"/>
-          <line x1="-11" y1="0" x2="11" y2="0" stroke="#AEDC44" strokeWidth="2.1" strokeLinecap="round"/>
-          <line x1="-6" y1="-6" x2="6" y2="6" stroke="#AEDC44" strokeWidth="1" strokeLinecap="round"/>
-          <line x1="6" y1="-6" x2="-6" y2="6" stroke="#AEDC44" strokeWidth="1" strokeLinecap="round"/>
-        </g>
-        <g transform="translate(100,58)" opacity="0.62">
-          <line x1="0" y1="-8" x2="0" y2="8" stroke="#9ED838" strokeWidth="1.6" strokeLinecap="round"/>
-          <line x1="-8" y1="0" x2="8" y2="0" stroke="#9ED838" strokeWidth="1.6" strokeLinecap="round"/>
-        </g>
-      </svg>
-    ),
+    illustration: <img src="/ob-gift.png" alt="" style={{ width: '100%', maxWidth: 380, objectFit: 'contain' }} />,
     title: 'Получайте то,\nчто хотите',
     desc: 'Больше никаких неудачных подарков — только то, что действительно радует.',
   },
