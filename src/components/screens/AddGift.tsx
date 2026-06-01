@@ -48,7 +48,7 @@ export function AddGift({ onBack, onSaved, wishlistId = 'mwl-bday' }: AddGiftPro
           onClick={handleSave}
           disabled={!name.trim()}
           className="text-[16px] font-bold border-none bg-transparent cursor-pointer press"
-          style={{ color: name.trim() ? '#D9FA85' : '#C8C8C8' }}
+          style={{ color: name.trim() ? '#111111' : '#C8C8C8' }}
         >
           Готово
         </button>

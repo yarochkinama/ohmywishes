@@ -42,7 +42,7 @@ export function MyWishlists({ onWishlist, onCreate, onBack }: MyWishlistsProps) 
         <button
           onClick={onCreate}
           className="press"
-          style={{ width: '100%', height: 52, borderRadius: 14, border: '1.5px solid #D9FA85', background: 'white', color: '#D9FA85', fontWeight: 600, fontSize: 16, cursor: 'pointer', marginBottom: 16 }}
+          style={{ width: '100%', height: 52, borderRadius: 14, border: 'none', background: '#D9FA85', color: '#111111', fontWeight: 600, fontSize: 16, cursor: 'pointer', marginBottom: 16 }}
         >
           + Создать вишлист
         </button>

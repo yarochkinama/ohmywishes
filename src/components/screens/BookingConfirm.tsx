@@ -52,13 +52,13 @@ export function BookingConfirm({ gift, friend, onDone, onBuyLink, onViewOthers }
             </div>
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: 14, fontWeight: 600, color: '#111', marginBottom: 4 }}>{gift.name}</div>
-              <div style={{ fontSize: 14, fontWeight: 700, color: '#D9FA85' }}>{formatPrice(gift.price)}</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: '#111' }}>{formatPrice(gift.price)}</div>
               <div style={{ marginTop: 4 }}><ShopBadge shop={gift.shop} /></div>
             </div>
           </div>
           <span style={{
             background: gift.priority === 'high' ? '#EAF4DF' : '#F5F5F5',
-            color: gift.priority === 'high' ? '#D9FA85' : '#888',
+            color: gift.priority === 'high' ? '#1A4A00' : '#888',
             fontSize: 11,
             fontWeight: 600,
             padding: '3px 10px',
@@ -85,14 +85,14 @@ export function BookingConfirm({ gift, friend, onDone, onBuyLink, onViewOthers }
           <button
             onClick={onBuyLink}
             className="press"
-            style={{ width: '100%', height: 62, borderRadius: 14, background: '#D9FA85', color: 'white', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 14, padding: '0 18px', textAlign: 'left' }}
+            style={{ width: '100%', height: 62, borderRadius: 14, background: '#D9FA85', color: '#111111', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 14, padding: '0 18px', textAlign: 'left' }}
           >
             <span style={{ fontSize: 22 }}>🛒</span>
             <div>
               <div style={{ fontSize: 15, fontWeight: 600 }}>Купить по ссылке</div>
               <div style={{ fontSize: 12, opacity: 0.8 }}>Перейти в магазин</div>
             </div>
-            <svg style={{ marginLeft: 'auto' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
+            <svg style={{ marginLeft: 'auto' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A4A00" strokeWidth="2"><path d="M9 18l6-6-6-6"/></svg>
           </button>
           <button
             onClick={onViewOthers}

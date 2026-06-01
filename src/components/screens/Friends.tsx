@@ -79,7 +79,7 @@ export function Friends({ onFriend, onTab }: FriendsProps) {
           <div style={{ padding: '0 20px 16px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
               <span style={{ fontSize: 15, fontWeight: 600, color: '#111' }}>Заявки в друзья</span>
-              <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#D9FA85', fontSize: 13 }}>Смотреть все</button>
+              <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#111111', fontSize: 13 }}>Смотреть все</button>
             </div>
             {friendRequests.map(r => (
               <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderRadius: 14, border: '1px solid #F0F0F0', background: 'white', marginBottom: 8 }}>
@@ -131,7 +131,7 @@ export function Friends({ onFriend, onTab }: FriendsProps) {
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontSize: 15, fontWeight: 600, color: '#111' }}>{f.name}</div>
-                  <div style={{ fontSize: 12, color: f.isOnline ? '#D9FA85' : '#888', marginTop: 2 }}>
+                  <div style={{ fontSize: 12, color: f.isOnline ? '#3E9A00' : '#888', marginTop: 2 }}>
                     {f.isOnline ? 'Онлайн' : f.bio}
                   </div>
                 </div>
