@@ -45,7 +45,7 @@ export function GiftCardNew({ gift, wishlist, friend, onBack, onBook, onCancel }
         <div style={{ position: 'absolute', bottom: 12, right: 16, zIndex: 10 }}>
           <span style={{
             background: isFree ? '#EAF4DF' : '#F5F5F5',
-            color: isFree ? '#62B830' : '#888',
+            color: isFree ? '#D9FA85' : '#888',
             fontSize: 12,
             fontWeight: 600,
             padding: '5px 14px',
@@ -66,11 +66,11 @@ export function GiftCardNew({ gift, wishlist, friend, onBack, onBook, onCancel }
 
         {/* Price row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14, flexWrap: 'wrap' }}>
-          <span style={{ fontSize: 20, fontWeight: 700, color: '#62B830' }}>{formatPrice(gift.price)}</span>
+          <span style={{ fontSize: 20, fontWeight: 700, color: '#D9FA85' }}>{formatPrice(gift.price)}</span>
           <ShopBadge shop={gift.shop} />
           <span style={{
             background: gift.priority === 'high' ? '#EAF4DF' : '#F5F5F5',
-            color: gift.priority === 'high' ? '#62B830' : '#888',
+            color: gift.priority === 'high' ? '#D9FA85' : '#888',
             fontSize: 11,
             fontWeight: 600,
             padding: '3px 10px',
@@ -87,8 +87,8 @@ export function GiftCardNew({ gift, wishlist, friend, onBack, onBook, onCancel }
 
         {/* Owner comment */}
         {gift.ownerComment && (
-          <div style={{ marginBottom: 16, padding: '12px 14px', background: '#F9FFF5', borderRadius: 12, borderLeft: '3px solid #62B830' }}>
-            <div style={{ fontSize: 12, fontWeight: 600, color: '#62B830', marginBottom: 6 }}>Комментарий {friend.name}</div>
+          <div style={{ marginBottom: 16, padding: '12px 14px', background: '#F9FFF5', borderRadius: 12, borderLeft: '3px solid #D9FA85' }}>
+            <div style={{ fontSize: 12, fontWeight: 600, color: '#D9FA85', marginBottom: 6 }}>Комментарий {friend.name}</div>
             <p style={{ fontSize: 14, color: '#555', fontStyle: 'italic', lineHeight: 1.5 }}>"{gift.ownerComment}"</p>
           </div>
         )}
@@ -101,12 +101,12 @@ export function GiftCardNew({ gift, wishlist, friend, onBack, onBook, onCancel }
               <button
                 onClick={onBook}
                 className="press"
-                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 16px', borderRadius: 14, background: '#62B830', border: 'none', cursor: 'pointer', textAlign: 'left' }}
+                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 16px', borderRadius: 14, background: '#D9FA85', border: 'none', cursor: 'pointer', textAlign: 'left' }}
               >
                 <span style={{ fontSize: 22 }}>🔒</span>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 15, fontWeight: 600, color: 'white' }}>Забронировать подарок</div>
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.75)', marginTop: 2 }}>Скроем от {friend.name} и других</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, color: '#1A4A00' }}>Забронировать подарок</div>
+                  <div style={{ fontSize: 12, color: '#3A7A00', marginTop: 2 }}>Скроем от {friend.name} и других</div>
                 </div>
               </button>
               {/* Buy link */}

@@ -48,7 +48,7 @@ export function AddGift({ onBack, onSaved, wishlistId = 'mwl-bday' }: AddGiftPro
           onClick={handleSave}
           disabled={!name.trim()}
           className="text-[16px] font-bold border-none bg-transparent cursor-pointer press"
-          style={{ color: name.trim() ? '#62B830' : '#C8C8C8' }}
+          style={{ color: name.trim() ? '#D9FA85' : '#C8C8C8' }}
         >
           Готово
         </button>
@@ -66,7 +66,7 @@ export function AddGift({ onBack, onSaved, wishlistId = 'mwl-bday' }: AddGiftPro
                 className="h-[48px] rounded-[12px] flex items-center justify-center text-[24px] border-2 transition-all press"
                 style={{
                   background: emoji === e ? '#EAF4DF' : '#F8F8F6',
-                  borderColor: emoji === e ? '#62B830' : 'transparent',
+                  borderColor: emoji === e ? '#D9FA85' : 'transparent',
                 }}
               >
                 {e}
@@ -126,9 +126,10 @@ export function AddGift({ onBack, onSaved, wishlistId = 'mwl-bday' }: AddGiftPro
         <button
           onClick={handleSave}
           disabled={!name.trim()}
-          className="w-full py-[17px] rounded-[18px] text-white font-bold text-[16px] press transition-opacity"
+          className="w-full py-[17px] rounded-[18px] font-bold text-[16px] press transition-opacity"
           style={{
-            background: '#62B830',
+            background: '#D9FA85',
+            color: '#1A4A00',
             opacity: name.trim() ? 1 : 0.4,
           }}
         >

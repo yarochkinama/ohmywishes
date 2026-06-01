@@ -72,7 +72,7 @@ export function ShareWishlist({ wishlist, onBack }: ShareWishlistProps) {
               giftly.app/wishlist/masha-bday-2026
             </span>
             <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#62B830" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D9FA85" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             </button>
           </div>
         </div>
@@ -88,7 +88,7 @@ export function ShareWishlist({ wishlist, onBack }: ShareWishlistProps) {
         {/* Copy button */}
         <button
           className="press"
-          style={{ width: '100%', height: 54, borderRadius: 14, background: '#62B830', color: 'white', fontWeight: 600, fontSize: 16, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }}
+          style={{ width: '100%', height: 54, borderRadius: 14, background: '#D9FA85', color: 'white', fontWeight: 600, fontSize: 16, border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }}
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></svg>
           Скопировать ссылку

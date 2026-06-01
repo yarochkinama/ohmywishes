@@ -20,9 +20,10 @@ export function Toast({ message, type = 'green', onDone }: ToastProps) {
 
   return (
     <div
-      className={`absolute top-[62px] left-5 right-5 z-50 rounded-[13px] px-4 py-[13px] text-center text-[14px] font-semibold text-white pointer-events-none transition-opacity duration-200 toast-pop`}
+      className={`absolute top-[62px] left-5 right-5 z-50 rounded-[13px] px-4 py-[13px] text-center text-[14px] font-semibold pointer-events-none transition-opacity duration-200 toast-pop`}
       style={{
-        background: type === 'green' ? '#62B830' : '#888',
+        background: type === 'green' ? '#D9FA85' : '#888',
+        color: type === 'green' ? '#1A4A00' : 'white',
         opacity: visible ? 1 : 0,
       }}
     >

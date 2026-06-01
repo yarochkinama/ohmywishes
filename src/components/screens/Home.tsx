@@ -55,7 +55,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
               </div>
               <button
                 className="press"
-                style={{ background: 'white', color: '#62B830', fontSize: 13, fontWeight: 600, padding: '7px 16px', borderRadius: 100, border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}
+                style={{ background: 'white', color: '#D9FA85', fontSize: 13, fontWeight: 600, padding: '7px 16px', borderRadius: 100, border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}
               >
                 Пройти квиз →
               </button>
@@ -109,7 +109,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
         <div style={{ padding: '0 20px 20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Популярные категории</span>
-            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
+            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#D9FA85', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
           </div>
           <div className="scroll-x" style={{ display: 'flex', gap: 10 }}>
             {categories.map((cat, i) => (
@@ -125,7 +125,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
         <div style={{ padding: '0 20px 20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Идеи для вас</span>
-            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13, fontWeight: 500 }}>Ещё идеи</button>
+            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#D9FA85', fontSize: 13, fontWeight: 500 }}>Ещё идеи</button>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
             {HOME_IDEAS.map(idea => (
@@ -149,8 +149,8 @@ export function Home({ onFriendWishlist }: HomeProps) {
                 <div style={{ padding: '10px 10px 10px' }}>
                   <div style={{ fontSize: 12, fontWeight: 500, color: '#111', lineHeight: 1.4, marginBottom: 6, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{idea.name}</div>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <span style={{ fontSize: 13, fontWeight: 700, color: '#62B830' }}>{formatPrice(idea.price)}</span>
-                    <button className="press" style={{ width: 28, height: 28, borderRadius: '50%', background: '#62B830', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 16, fontWeight: 700 }}>+</button>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: '#D9FA85' }}>{formatPrice(idea.price)}</span>
+                    <button className="press" style={{ width: 28, height: 28, borderRadius: '50%', background: '#D9FA85', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1A4A00', fontSize: 16, fontWeight: 700 }}>+</button>
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
         <div style={{ padding: '0 20px 24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <span style={{ fontSize: 17, fontWeight: 700, color: '#111' }}>Вишлисты друзей</span>
-            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
+            <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#D9FA85', fontSize: 13, fontWeight: 500 }}>Смотреть все</button>
           </div>
           <div className="scroll-x" style={{ display: 'flex', gap: 10 }}>
             {FRIENDS.slice(0, 4).map(friend => (

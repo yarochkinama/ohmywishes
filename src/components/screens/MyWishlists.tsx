@@ -42,7 +42,7 @@ export function MyWishlists({ onWishlist, onCreate, onBack }: MyWishlistsProps) 
         <button
           onClick={onCreate}
           className="press"
-          style={{ width: '100%', height: 52, borderRadius: 14, border: '1.5px solid #62B830', background: 'white', color: '#62B830', fontWeight: 600, fontSize: 16, cursor: 'pointer', marginBottom: 16 }}
+          style={{ width: '100%', height: 52, borderRadius: 14, border: '1.5px solid #D9FA85', background: 'white', color: '#D9FA85', fontWeight: 600, fontSize: 16, cursor: 'pointer', marginBottom: 16 }}
         >
           + Создать вишлист
         </button>
@@ -72,7 +72,7 @@ export function MyWishlists({ onWishlist, onCreate, onBack }: MyWishlistsProps) 
                   {total > 0 && (
                     <>
                       <div style={{ height: 4, borderRadius: 100, background: '#F0F0F0', overflow: 'hidden', marginBottom: 4 }}>
-                        <div style={{ height: '100%', width: `${pct}%`, background: '#62B830', borderRadius: 100 }} />
+                        <div style={{ height: '100%', width: `${pct}%`, background: '#D9FA85', borderRadius: 100 }} />
                       </div>
                       <div style={{ fontSize: 11, color: '#888' }}>{bookedCount} из {total} добавлено</div>
                     </>

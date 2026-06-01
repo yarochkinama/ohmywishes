@@ -64,8 +64,8 @@ export function Friends({ onFriend, onTab }: FriendsProps) {
                 border: 'none',
                 cursor: 'pointer',
                 fontSize: 14,
-                background: tab === t.id ? '#62B830' : 'transparent',
-                color: tab === t.id ? 'white' : '#888',
+                background: tab === t.id ? '#D9FA85' : 'transparent',
+                color: tab === t.id ? '#1A4A00' : '#888',
                 fontWeight: tab === t.id ? 600 : 500,
               }}
             >
@@ -79,7 +79,7 @@ export function Friends({ onFriend, onTab }: FriendsProps) {
           <div style={{ padding: '0 20px 16px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
               <span style={{ fontSize: 15, fontWeight: 600, color: '#111' }}>Заявки в друзья</span>
-              <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#62B830', fontSize: 13 }}>Смотреть все</button>
+              <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#D9FA85', fontSize: 13 }}>Смотреть все</button>
             </div>
             {friendRequests.map(r => (
               <div key={r.id} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', borderRadius: 14, border: '1px solid #F0F0F0', background: 'white', marginBottom: 8 }}>
@@ -94,7 +94,7 @@ export function Friends({ onFriend, onTab }: FriendsProps) {
                     className="press"
                     style={{ width: 34, height: 34, borderRadius: '50%', background: '#EAF4DF', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                   >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#62B830" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D9FA85" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                   </button>
                   <button
                     onClick={() => declineRequest(r.id)}
@@ -126,12 +126,12 @@ export function Friends({ onFriend, onTab }: FriendsProps) {
                 <div style={{ position: 'relative' }}>
                   <Avatar name={f.name} initials={f.initials} color={f.color} size={44} />
                   {f.isOnline && (
-                    <div style={{ position: 'absolute', bottom: 2, right: 2, width: 10, height: 10, borderRadius: '50%', background: '#62B830', border: '2px solid white' }} />
+                    <div style={{ position: 'absolute', bottom: 2, right: 2, width: 10, height: 10, borderRadius: '50%', background: '#D9FA85', border: '2px solid white' }} />
                   )}
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontSize: 15, fontWeight: 600, color: '#111' }}>{f.name}</div>
-                  <div style={{ fontSize: 12, color: f.isOnline ? '#62B830' : '#888', marginTop: 2 }}>
+                  <div style={{ fontSize: 12, color: f.isOnline ? '#D9FA85' : '#888', marginTop: 2 }}>
                     {f.isOnline ? 'Онлайн' : f.bio}
                   </div>
                 </div>

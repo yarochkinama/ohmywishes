@@ -121,8 +121,8 @@ export function AddGiftManual({ wishlistId, onBack, onSaved }: AddGiftManualProp
                     cursor: 'pointer',
                     fontSize: 13,
                     fontWeight: 600,
-                    background: priority === p ? '#62B830' : '#F5F5F5',
-                    color: priority === p ? 'white' : '#888',
+                    background: priority === p ? '#D9FA85' : '#F5F5F5',
+                    color: priority === p ? '#1A4A00' : '#888',
                   }}
                 >
                   {labels[p]}
@@ -141,8 +141,8 @@ export function AddGiftManual({ wishlistId, onBack, onSaved }: AddGiftManualProp
             width: '100%',
             height: 54,
             borderRadius: 14,
-            background: name.trim() ? '#62B830' : '#C0C0C0',
-            color: 'white',
+            background: name.trim() ? '#D9FA85' : '#C0C0C0',
+            color: name.trim() ? '#1A4A00' : 'white',
             fontWeight: 600,
             fontSize: 16,
             border: 'none',
