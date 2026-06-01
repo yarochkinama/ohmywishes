@@ -8,10 +8,10 @@ interface HomeProps {
 }
 
 const categories = [
-  { emoji: '💐', label: 'для неё' },
-  { emoji: '🎮', label: 'для него' },
-  { emoji: '🎂', label: 'день рождения' },
-  { emoji: '🎡', label: 'впечатления' },
+  { img: 'https://images.unsplash.com/photo-1596436889106-be35e843f974?w=160&h=160&fit=crop&auto=format&q=80', label: 'для неё' },
+  { img: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=160&h=160&fit=crop&auto=format&q=80', label: 'для него' },
+  { img: 'https://images.unsplash.com/photo-1558636508-e0969431e4b9?w=160&h=160&fit=crop&auto=format&q=80', label: 'день\nрождения' },
+  { img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=160&h=160&fit=crop&auto=format&q=80', label: 'впечатления' },
 ]
 
 const quickActions = [
@@ -113,9 +113,11 @@ export function Home({ onFriendWishlist }: HomeProps) {
           </div>
           <div className="scroll-x" style={{ display: 'flex', gap: 10 }}>
             {categories.map((cat, i) => (
-              <button key={i} className="press" style={{ flexShrink: 0, width: 80, border: '1px solid #F0F0F0', borderRadius: 16, background: 'white', cursor: 'pointer', padding: '12px 8px 8px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
-                <span style={{ fontSize: 28 }}>{cat.emoji}</span>
-                <span style={{ fontSize: 10, color: '#888', textAlign: 'center', lineHeight: 1.3 }}>{cat.label}</span>
+              <button key={i} className="press" style={{ flexShrink: 0, width: 90, border: 'none', borderRadius: 16, background: 'none', cursor: 'pointer', padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                <div style={{ width: 90, height: 90, borderRadius: 16, overflow: 'hidden', flexShrink: 0 }}>
+                  <img src={(cat as { img: string }).img} alt={cat.label} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </div>
+                <span style={{ fontSize: 11, fontWeight: 500, color: '#111', textAlign: 'center', lineHeight: 1.3, whiteSpace: 'pre-line' }}>{cat.label}</span>
               </button>
             ))}
           </div>
