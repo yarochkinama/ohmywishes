@@ -55,7 +55,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
               </div>
               <button
                 className="press"
-                style={{ background: 'white', color: '#D9FA85', fontSize: 13, fontWeight: 600, padding: '7px 16px', borderRadius: 100, border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}
+                style={{ background: 'white', color: '#111111', fontSize: 13, fontWeight: 600, padding: '7px 16px', borderRadius: 100, border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}
               >
                 Пройти квиз →
               </button>
