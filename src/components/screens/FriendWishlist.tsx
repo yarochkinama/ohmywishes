@@ -18,7 +18,7 @@ function PriorityBadge({ priority }: { priority: string }) {
   return (
     <span style={{
       background: high ? '#EAF4DF' : '#F5F5F5',
-      color: high ? '#D9FA85' : '#888',
+      color: high ? '#1A4A00' : '#888',
       fontSize: 11,
       fontWeight: 600,
       padding: '3px 10px',
@@ -57,7 +57,7 @@ export function FriendWishlist({ friend, wishlist, onBack, onGift }: FriendWishl
         <button onClick={onBack} className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2.5"><path d="M15 18l-6-6 6-6"/></svg>
         </button>
-        <span style={{ background: '#EAF4DF', color: '#D9FA85', padding: '6px 16px', borderRadius: 100, fontSize: 13, fontWeight: 600 }}>
+        <span style={{ background: '#EAF4DF', color: '#1A4A00', padding: '6px 16px', borderRadius: 100, fontSize: 13, fontWeight: 600 }}>
           Чужой вишлист
         </span>
         <button className="press" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 4 }}>
@@ -109,7 +109,7 @@ export function FriendWishlist({ friend, wishlist, onBack, onGift }: FriendWishl
                 fontSize: 12,
                 fontWeight: filter === id ? 600 : 400,
                 background: filter === id ? '#EAF4DF' : '#F5F5F5',
-                color: filter === id ? '#D9FA85' : '#888',
+                color: filter === id ? '#1A4A00' : '#888',
                 flexShrink: 0,
               }}
             >
@@ -155,7 +155,7 @@ export function FriendWishlist({ friend, wishlist, onBack, onGift }: FriendWishl
                   <span style={{
                     fontSize: 12,
                     fontWeight: 600,
-                    color: isFree ? '#D9FA85' : '#888',
+                    color: isFree ? '#1A4A00' : '#888',
                     padding: '3px 10px',
                     borderRadius: 100,
                     background: isFree ? '#EAF4DF' : '#F5F5F5',
