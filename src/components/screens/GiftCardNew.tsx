@@ -54,10 +54,14 @@ export function GiftCardNew({ gift, wishlist, friend, onBack, onBook, onCancel }
             {isFree ? 'Свободен' : 'Забронирован'}
           </span>
         </div>
-        {/* Emoji */}
-        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontSize: 80 }}>{gift.image}</span>
-        </div>
+        {/* Image */}
+        {gift.image.startsWith('http') ? (
+          <img src={gift.image} alt={gift.name} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+        ) : (
+          <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <span style={{ fontSize: 80 }}>{gift.image}</span>
+          </div>
+        )}
       </div>
 
       {/* Content */}

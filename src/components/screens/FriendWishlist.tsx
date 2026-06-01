@@ -140,8 +140,12 @@ export function FriendWishlist({ friend, wishlist, onBack, onGift }: FriendWishl
                 }}
               >
                 {/* Image */}
-                <div style={{ width: 56, height: 56, borderRadius: 12, background: gift.imageBg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28, flexShrink: 0 }}>
-                  {gift.image}
+                <div style={{ width: 56, height: 56, borderRadius: 12, background: gift.imageBg, overflow: 'hidden', flexShrink: 0 }}>
+                  {gift.image.startsWith('http') ? (
+                    <img src={gift.image} alt={gift.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  ) : (
+                    <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 28 }}>{gift.image}</div>
+                  )}
                 </div>
                 {/* Info */}
                 <div style={{ flex: 1, minWidth: 0 }}>
