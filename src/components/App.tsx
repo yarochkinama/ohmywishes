@@ -17,6 +17,7 @@ import { AddGiftManual } from './screens/AddGiftManual'
 import { AddGiftSearch } from './screens/AddGiftSearch'
 import { ShareWishlist } from './screens/ShareWishlist'
 import { Profile } from './screens/Profile'
+import { Quiz } from './screens/Quiz'
 import { BottomNav } from './ui/BottomNav'
 
 type Screen =
@@ -35,6 +36,7 @@ type Screen =
   | { id: 'addGiftManual'; wishlistId: string }
   | { id: 'addGiftSearch'; wishlistId: string }
   | { id: 'shareWishlist'; wishlistId: string }
+  | { id: 'quiz' }
 
 const BOTTOM_NAV_SCREENS = ['home', 'favorites', 'friends', 'profile']
 
@@ -87,6 +89,10 @@ export function App() {
   function renderScreen() {
     const s = screen
 
+    if (s.id === 'quiz') {
+      return <Quiz onBack={() => navigate({ id: 'home' }, 'back')} />
+    }
+
     if (s.id === 'home') {
       return (
         <Home
@@ -94,6 +100,7 @@ export function App() {
             setActiveTab('friends')
             navigate({ id: 'friendWishlist', friendId, wishlistId })
           }}
+          onQuiz={() => navigate({ id: 'quiz' })}
         />
       )
     }

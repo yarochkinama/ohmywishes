@@ -5,6 +5,7 @@ import { FRIENDS, HOME_IDEAS, ME, formatPrice } from '@/lib/data'
 
 interface HomeProps {
   onFriendWishlist: (friendId: string, wishlistId: string) => void
+  onQuiz: () => void
 }
 
 const categories = [
@@ -29,7 +30,7 @@ function ShopBadge({ shop }: { shop: string | null }) {
   return null
 }
 
-export function Home({ onFriendWishlist }: HomeProps) {
+export function Home({ onFriendWishlist, onQuiz }: HomeProps) {
   const slava = FRIENDS.find(f => f.id === 'slava')
 
   return (
@@ -55,6 +56,7 @@ export function Home({ onFriendWishlist }: HomeProps) {
               </div>
               <button
                 className="press"
+                onClick={onQuiz}
                 style={{ background: 'white', color: '#111111', fontSize: 13, fontWeight: 600, padding: '7px 16px', borderRadius: 100, border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}
               >
                 Пройти квиз →

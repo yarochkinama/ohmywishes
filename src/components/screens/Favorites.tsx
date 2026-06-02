@@ -93,7 +93,7 @@ export function Favorites() {
             <div key={item.id} style={{ border: '1px solid #F0F0F0', borderRadius: 14, background: 'white', overflow: 'hidden' }}>
               {/* Image */}
               <div style={{ height: 120, background: item.imageBg, overflow: 'hidden', position: 'relative' }}>
-                {item.image.startsWith('http') ? (
+                {(item.image.startsWith('http') || item.image.startsWith('/')) ? (
                   <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 ) : (
                   <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ fontSize: 36 }}>{item.image}</span></div>
